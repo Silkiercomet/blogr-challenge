@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+:root{
+    --vlg:hsl(0, 0%, 95%);
+}
+
+html{
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.hero-b{
+    background:linear-gradient(to right,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+    border-bottom-left-radius: 100px;
+}
+.hero{
+    height: 80vh;
+    background-image: url(images/bg-pattern-intro.svg);
+    background-position: 26% 50% ;
+    background-repeat: no-repeat;
+    padding-top: 2.5rem;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+}
+.navbar .right ul,.navbar .right, .navbar .left{
+    display: flex;
+    list-style: none;
+}
+.navbar .right ul li a:nth-child(1),.navbar .right ul li a:nth-child(2){
+    padding-right: 1rem;
+}
+.navbar .right ul li a img{
+    padding: 0 0.5rem;
+}
+.navbar .right ul li a {
+    font-weight: 500;
+}
+.navbar .right ul li a, .navbar .left a, .buttoms a{
+    text-decoration: none;
+    color: white;
+}
+.header {
+    height: calc(55vh - 100px);
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+}
+.header h1{
+    font-size: 3.2rem;
+    margin-bottom: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+
+.buttoms{
+    display: flex;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+.left  div:nth-child(1) a{
+    border: 0;
+    font-weight: 500;
+    padding: 0.8rem 2.2rem ;
+}
+.left  div:nth-child(2) a{
+    background-color: white;
+    color: hsl(356, 100%, 66%);
+    font-weight: 700;
+    padding: 0.8rem 2.2rem ;
+}
+.buttoms div:first-child{
+   padding-right: 0.5rem;
+}
+.buttoms div:first-child a{
+    background-color: white;
+    color: hsl(356, 100%, 66%);
+    font-weight: 700;
+}
+/*showcase-1*/
+.wrapper-1{
+    position: relative;
+    width: 100vw;
+}
+.header-body{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: 100px;
+    
+}
+.showcase-1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.showcase-1 .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/*showcase-1*/
+
+/* utilities */
+.btn{
+    display: block;
+    padding: 0.8rem 1rem ;
+    border: 1px solid white;
+    border-radius: 2rem;
+    transition: all 500ms;
+    text-align: center;
+}
+/* utilities */
