@@ -88,6 +88,8 @@ body{
     color: hsl(356, 100%, 66%);
     font-weight: 700;
 }
+
+
 /*showcase-1*/
 .wrapper-1{
     position: relative;
@@ -111,9 +113,118 @@ body{
     justify-content: center;
     align-items: flex-start;
 }
+.content-show{
+    padding: 0 5.2rem;
+    font-weight: 400;
+}
+.wrapper-1 .left .content-show p{
+    line-height: 1.8rem;
+    color: hsl(207, 13%, 34%);
+    font-weight: 400;
+}
+.wrapper-1 .left .content-show h1:nth-child(2){
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
 
 
 /*showcase-1*/
+
+/*showcase-2*/
+.wrapper-2{
+    background:linear-gradient(to left,hsl(237, 23%, 32%),hsl(237, 17%, 21%));
+    border-bottom-left-radius: 100px;
+    border-top-right-radius:100px ;
+    margin-top: 2rem;
+}
+.showcase-2{
+    height: 400px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    background-image: url(images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: -70% 80%;
+}
+.wrapper-2 .showcase-2 .left img{
+    padding-left: 4rem;
+    transform: translateY(-5rem);
+    
+}
+.wrapper-2 .showcase-2 .left{
+    flex: 1;
+}
+.wrapper-2 .showcase-2 .right{
+    height: 68%;
+    padding: 0 5.2rem;
+    line-height: 1.8rem;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: 400;
+}
+/*showcase-2*/
+
+/*showcase-3*/
+.wrapper-3{
+    width: 100vw;
+    position: relative;
+    margin-top: 5rem;
+}
+.wrapper-3 .showcase-1{
+grid-auto-flow: dense;
+}
+.wrapper-3 .showcase-1 .left{
+    grid-column: 2;
+}
+.wrapper-3 .showcase-1 .right{
+    transform: translateX(-17rem);
+}
+.wrapper-3 .showcase-1 .left p{
+    line-height: 1.8rem;
+    color: hsl(207, 13%, 34%) ;
+}
+/*showcase-3*/
+
+/* footer */
+.footer-container{
+    background-color: hsl(240, 10%, 16%);
+    width: 100vw;
+    height:60vh;
+    margin-top: 6rem;
+}
+footer{
+    display: flex;
+    width: 80%;
+    padding-top:3rem ;
+    padding-left: 3rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.heading-f{
+    color: white;
+  
+}
+.footer-elements{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    list-style: none;
+    color: white;
+    line-height: 1.8rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.footer-column-1{
+    padding-top: 1.8rem;
+}
+.footer-elements li{
+    color: hsl(240, 2%, 79%);
+}
+
+
+/* footer */
 
 /* utilities */
 .btn{
@@ -123,5 +234,9 @@ body{
     border-radius: 2rem;
     transition: all 500ms;
     text-align: center;
+}
+.showcase-header{
+    color: hsl(208, 49%, 24%);
+    font-weight: 500;
 }
 /* utilities */
