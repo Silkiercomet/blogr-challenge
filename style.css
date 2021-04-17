@@ -7,6 +7,7 @@ html{
     font-family: 'Overpass', sans-serif;
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
+    
 }
 *,*::after,*::before{
     box-sizing: inherit;
@@ -14,6 +15,7 @@ html{
 body{
     margin: 0;
     padding: 0;
+    
 }
 .hero-b{
     background:linear-gradient(to right,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
@@ -56,6 +58,7 @@ body{
     align-items: center;
     flex-direction: column;
     margin-top: 0;
+    animation: fadeIn linear 3.5s;
 }
 .header h1{
     font-size: 3.2rem;
@@ -82,7 +85,8 @@ body{
     padding: 0.8rem 2.2rem ;
 }
 .buttoms div:nth-child(2) a:hover{
-    padding: 0.8rem 0.95rem
+    padding: 0.8rem 1rem;
+    border: hidden;
 }
 .left  div:nth-child(2) a:hover,
 .buttoms div:first-child a:hover{
@@ -98,41 +102,75 @@ body{
     color: hsl(356, 100%, 66%);
     font-weight: 700;
 }
-/*  dropdown 
+
+/*  dropdown */
+
 .right{
     position: relative;
 }
-.dropdown-1{
-    display: grid;
-    height: 130px;
-    width: 150px;
-    background-color: white;
+#img-1{
+    transform: rotate(1turn);
+    transition: all 500ms;
+}
+.drop{
     position: absolute;
-    overflow: hidden;
+    height: 150px;
+    max-width: 150px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 5px 15px 4px rgba(0,0,0,0.3);
     top: 60px;
-    left: 200;
+    animation: fadeIn ease .5s;
+}
+.drop-1{
+    display:none;
+    left: 100px;
+}
+.drop-2{
+    display: none;
+    left: 210px;
+}
+.drop-3{
+    display:none;
+}
 
+.dropdown{
+    display: grid;
+    height: 100%;
+    min-width: 100%;
+    place-items: center end;
+    padding: 2rem;
+    margin: auto;
 }
-.dropdown-1 > *{
-    width: 100%;
-    place-items: flex-start;
+
+.dropdown-2{
+    transform: translateX(-20px);
 }
+
+.dropdown-3{
+    min-width: 150px;
+    place-items: end;
+}
+
 .dropdown-m{
     display: flex;
     flex-flow: column nowrap;
-    margin: 0 auto;
+    place-items: flex-start;
     min-width: 100%;
     min-height: 100%;
 }
 .dropdown-m > *{
     padding: 0.5rem 1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
-  dropdown */
+/*  dropdown */
 
 /*showcase-1*/
 .wrapper-1{
     position: relative;
     width: 100vw;
+    overflow: hidden;
 }
 .header-body{
     width: 100%;
@@ -279,4 +317,8 @@ footer{
     color: hsl(208, 49%, 24%);
     font-weight: 500;
 }
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 /* utilities */
