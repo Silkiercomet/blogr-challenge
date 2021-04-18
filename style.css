@@ -15,13 +15,23 @@ html{
 body{
     margin: 0;
     padding: 0;
-    
+    overflow-x: hidden;
 }
 .hero-b{
     background:linear-gradient(to right,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
     border-bottom-left-radius: 100px;
 }
-.hero{
+.mobile-hero{
+    display: none;
+    flex-direction: column;
+}
+.mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+.hero, .mobile-hero{
     height: 80vh;
     background-image: url(images/bg-pattern-intro.svg);
     background-position: 26% 50% ;
@@ -169,8 +179,8 @@ body{
 /*showcase-1*/
 .wrapper-1{
     position: relative;
-    width: 100vw;
-    overflow: hidden;
+    width: 100%;
+   overflow: hidden;
 }
 .header-body{
     width: 100%;
@@ -202,6 +212,12 @@ body{
 .wrapper-1 .left .content-show h1:nth-child(2){
     margin-top: 2rem;
     padding-top: 2rem;
+}
+.showcase-1-img-m{
+    display: none;
+}
+.showcase-1-img{
+    display: flex;
 }
 
 
@@ -247,6 +263,7 @@ body{
     width: 100vw;
     position: relative;
     margin-top: 5rem;
+    overflow: hidden;
 }
 .wrapper-3 .showcase-1{
 grid-auto-flow: dense;
@@ -261,15 +278,20 @@ grid-auto-flow: dense;
     line-height: 1.8rem;
     color: hsl(207, 13%, 34%) ;
 }
+.mobile-img-3{
+    display: none;
+    width: 100%;
+}
 /*showcase-3*/
 
 /* footer */
 .footer-container{
     background-color: hsl(240, 10%, 16%);
-    width: 100vw;
+    width: 100%;
     height:60vh;
     margin-top: 6rem;
     border-top-right-radius: 100px;
+    overflow: hidden;
 }
 footer{
     display: flex;
@@ -322,3 +344,134 @@ footer{
     100% {opacity:1;}
   }
 /* utilities */
+
+/* media queries */
+@media (max-width:700px){
+    .hero{
+        display: none;
+    }
+    .mobile-hero{
+        display:flex ;
+        border-bottom-left-radius: 250px;
+        height: 100vh;
+        width: 100vw;
+        background-position: center;
+    }
+    .header-m {
+        height: 100%;
+        color:white;
+        display: flex;
+        place-items: center end;
+        flex-direction: column;
+        margin-top: 2rem;
+        padding: 0 2rem;
+        animation: fadeIn linear 3.5s;
+    }
+    .header-m h1{
+        text-align: center;
+        font-weight: 400;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .header-m p{
+        margin-top: 0;
+        padding-top: 0;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight:300;
+        font-family: 'Overpass', sans-serif;
+    }
+    .header-body{
+        top: 0;
+    }
+    .wrapper-1{
+        margin-top: 5rem;
+    }
+    .header-body:first-child{
+        margin-bottom: 5rem;
+    }
+    .showcase-header{
+        margin-top: 4rem;
+    }
+    .showcase-1{
+        display: flex;
+        flex-direction: column-reverse ;
+    }
+    .showcase-1-img-m{
+        display: flex;
+        width: 100%;
+    }
+
+    .showcase-1-img{
+        display: none;
+    }
+    .content-show{
+        text-align: center;
+    }
+    /* showcase 2 */
+    .wrapper-2{
+        margin-top: 17rem;
+    }
+    .showcase-2{
+        display: flex;
+        flex-direction: column;
+        height: 120vh;
+        background-size: contain;
+        background-position: 50% top;
+    }
+    .showcase-2 .left img{
+        width: 100%;
+        padding: 0;
+        place-items: center;
+    }
+    .wrapper-2 .showcase-2 .left img{
+        padding-left: 0;
+        transform: translateY(-16rem);
+        
+    }
+    .content-show2{
+        transform: translateY(-19rem);
+        text-align: center;
+        height: 100%;
+    }
+    /* showcase 3 */
+    .wrapper-3 .showcase-1 .right .desktop-img{
+        display: none;
+    }
+    .mobile-img-3{
+        display: flex;
+        place-items: center;
+    }
+    .wrapper-3 .showcase-1 .right{
+        transform: translateX(0rem);
+    }
+
+    /* footer */
+    .footer-column-1{
+        transform: translateX(1.2rem);
+    }
+    .footer-container{
+        width: 100%;
+        height:150vh;
+        overflow: hidden;
+    }
+    footer{
+        display: flex;
+        width: 80%;
+        padding-top:3rem ;
+        padding-left: 3rem;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .footer-elements{
+        display: flex;
+        flex-direction: column;
+        flex-flow: column wrap;
+        list-style: none;
+        color: white;
+        line-height: 1.8rem;
+        place-items: center;
+    }
+}
