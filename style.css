@@ -20,6 +20,7 @@ body{
 .hero-b{
     background:linear-gradient(to right,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
     border-bottom-left-radius: 100px;
+    overflow: hidden;
 }
 .mobile-hero{
     display: none;
@@ -64,8 +65,7 @@ body{
     height: calc(55vh - 100px);
     color:white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
     flex-direction: column;
     margin-top: 0;
     animation: fadeIn linear 3.5s;
@@ -229,6 +229,7 @@ body{
     border-bottom-left-radius: 100px;
     border-top-right-radius:100px ;
     margin-top: 2rem;
+    
 }
 .showcase-2{
     height: 400px;
@@ -249,6 +250,7 @@ body{
 }
 .wrapper-2 .showcase-2 .right{
     height: 68%;
+    width: 100%;
     padding: 0 5.2rem;
     line-height: 1.8rem;
     display: grid;
@@ -346,23 +348,39 @@ footer{
 /* utilities */
 
 /* media queries */
-@media (max-width:700px){
+@media (max-width:1100px){
+    .wrapper-3 .showcase-1 .right{
+        transform: translateX(-21rem);
+    }
+}
+@media (max-width:950px){
+    .wrapper-3 .showcase-1 .right{
+        transform: translateX(-25rem);
+    }
+    .wrapper-2 .showcase-2 .left img{
+        transform: translateX(-5rem);
+    }
+}
+@media (max-width:900px){
     .hero{
         display: none;
     }
     .mobile-hero{
         display:flex ;
         border-bottom-left-radius: 250px;
-        height: 100vh;
+        height: 80vh;
         width: 100vw;
         background-position: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     .header-m {
-        height: 100%;
+        height: 50vh;
         color:white;
         display: flex;
-        place-items: center end;
+        justify-content: center;
         flex-direction: column;
+        align-items: center;
         margin-top: 2rem;
         padding: 0 2rem;
         animation: fadeIn linear 3.5s;
@@ -448,16 +466,17 @@ footer{
 
     /* footer */
     .footer-column-1{
-        transform: translateX(1.2rem);
+        transform: translateX(1.5rem);
     }
     .footer-container{
         width: 100%;
-        height:150vh;
+        height:100vh;
         overflow: hidden;
+        transform: translateX(2.5rem);
     }
     footer{
         display: flex;
-        width: 80%;
+        width: 83%;
         padding-top:3rem ;
         padding-left: 3rem;
         flex-wrap: wrap;
@@ -474,4 +493,10 @@ footer{
         line-height: 1.8rem;
         place-items: center;
     }
+}
+@media (max-width:600px){
+    .showcase-2{
+        height: 100vh;
+    }
+
 }
